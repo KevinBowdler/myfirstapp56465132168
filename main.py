@@ -6,6 +6,7 @@ quotes = ['Remember computers laugh at us when we do things manually, script eve
 class MainHandler(webapp2.RequestHandler):
 	def get(self):
 		self.response.headers["Content-Type"] = "text/plain"
+		self.response.out.write("Hello World....")
 		self.response.out.write(quotes[randrange(3)])
 
 app = webapp2.WSGIApplication([('/', MainHandler),],debug=True)
