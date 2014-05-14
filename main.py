@@ -10,9 +10,3 @@ class MainHandler(webapp2.RequestHandler):
 		self.response.out.write(quotes[randrange(3)])
 
 app = webapp2.WSGIApplication([('/', MainHandler),],debug=True)
-
-def main():
-	app.run()
-
-if __name__ == '__main__':
-  main()
